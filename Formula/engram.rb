@@ -1,25 +1,26 @@
 class Engram < Formula
   desc "Memory for production AI agents - hybrid search, knowledge graphs, MCP protocol"
   homepage "https://github.com/limaronaldo/engram"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-macos-arm64.tar.gz"
-      sha256 "PLACEHOLDER_SHA256_ARM64"
+      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-v#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 "dfc80aca209d129da90b89d2c1c2cf37bdf2390ed84e2d67a15f7ade73cd7b5d"
     else
-      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-macos-x86_64.tar.gz"
+      # x86_64 binary will be available once CI builds are set up
+      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-v#{version}-x86_64-apple-darwin.tar.gz"
       sha256 "PLACEHOLDER_SHA256_X86_64"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-linux-arm64.tar.gz"
+      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
       sha256 "PLACEHOLDER_SHA256_LINUX_ARM64"
     else
-      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-linux-x86_64.tar.gz"
+      url "https://github.com/limaronaldo/engram/releases/download/v#{version}/engram-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "PLACEHOLDER_SHA256_LINUX_X86_64"
     end
   end
