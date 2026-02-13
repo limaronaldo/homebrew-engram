@@ -44,6 +44,13 @@ brew update
 brew upgrade engram
 ```
 
-## Note
+## Alternative Installation
 
-SHA256 hashes in the formula are placeholders until GitHub release binaries are published.
+```bash
+# From crates.io (requires Rust toolchain)
+cargo install engram-core
+
+# From source
+git clone https://github.com/limaronaldo/engram.git
+cd engram && cargo install --path .
+```
