@@ -1,26 +1,26 @@
 class Agentshield < Formula
   desc "Security scanner for AI agent extensions — MCP servers, SARIF output"
   homepage "https://github.com/limaronaldo/agentshield"
-  version "0.2.0"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/limaronaldo/agentshield/releases/download/v#{version}/agentshield-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "a1d80ce1f30936e5ec7d11f8a0fca9a07ddf1a6e70bf2278dc6f5e2288ee4204"
+      sha256 "31a053dc1d28977e2456bdfb647f5c7431f0214138c56aa64deec4747fcaaff4"
     else
       url "https://github.com/limaronaldo/agentshield/releases/download/v#{version}/agentshield-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "6c5107b09dca0480f0e6324eda281e9b687e5a2eef07bcaa2c4e41f7d4d14d88"
+      sha256 "ae54e1db38c46944f52b75ccdf94574ae398368a7e44bc716fbbe80b24dcb4a9"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/limaronaldo/agentshield/releases/download/v#{version}/agentshield-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "63526ef5f5a4b99d9233f152e1d738dc7143e70eb3776a220f27e1938dce9067"
+      sha256 "eb57e30f5b43dbde9243bfc0c874ce49834bc858366aa11ca604f54b8d23f47f"
     else
       url "https://github.com/limaronaldo/agentshield/releases/download/v#{version}/agentshield-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "be19b2fe28b3a9c1b5e99e3709de5476d696f772d5f8fe33ae6842084dda9686"
+      sha256 "3af3cb61934bbd0dccb27ed347c9f80ff332b3680a647e5458560019485954a1"
     end
   end
 
